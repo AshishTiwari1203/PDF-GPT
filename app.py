@@ -76,7 +76,8 @@ def main():
                 vectorstore = get_vectorstore(text_chunks)
 
                 #Conversation session saving
-                
+                st.session_state.conversation = get_conversation_chain(
+                    vectorstore)
 
 if __name__ == '__main__':
         main()
